@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nameofapp</title>
+  <title>Hippie Turtle</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -18,39 +18,45 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-  <nav class="navbar navbar-custom" id="mynavbar">
-    <%= link_to image_tag("rellogo copy.png", size: "50"), root_path %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div class="background">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mynavbar">
+      <%= link_to image_tag("rellogo copy.png", size: "50"), root_path %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="nav navbar-nav">
-        <li class="nav-item">
-          <%= link_to "Home", root_path %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "About", simple_pages_about_path %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Contact", simple_pages_contact_path %>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to "About", simple_pages_about_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Contact", simple_pages_contact_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Products", simple_pages_products_path %>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
     </div>
+    <form class="search_bar" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <input type="submit" name="commit" value="Search" class="btn btn-submit" data-disable-with="Search" />
+      <input id="q" class="form-fld" type="text" name="q" />
+    </form>
   </nav>
 
-  <%= image_tag("1200px-Left_side_of_Flying_Pigeon.jpg", size: "500") %>
+
 
   <%= yield %>
 
   <footer id="myFooter">
     <ul>
       <li>
-        &copy; First at Last
+        &copy; Hippie Turtle
       </li>
     </ul>
   </footer>
