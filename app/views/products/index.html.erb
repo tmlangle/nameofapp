@@ -8,21 +8,34 @@
       <th>Name</th>
       <th>Description:</th>
       <th>Image url</th>
+      <th>Colour</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+
+<div class="container fluid">
+  <div class= "row  d-flex justify-content-around">
     <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="border border-white col-sm-3">
+        <a href=""><h2>Bike 1</h2></a>
+        <p>nice smile</p>
+        <strong>$ 280</strong>
+    </div><!-- /col -->
+    <div class="border border-white col-sm-3">
+        <a href=""><h2>Bike 2</h2></a>
+        <p>Pretty cool bike</p>
+        <strong>$ 420</strong>
+    </div><!-- /col -->
+    <div class="border border-white col-sm-3 ">
+        <a href=""><h2>Bike 3</h2></a>
+        <p>my favorite</p>
+        <strong>$ 370</strong>
+    </div><!-- /col -->
     <% end %>
+  </div>
+</div>
   </tbody>
 </table>
 
