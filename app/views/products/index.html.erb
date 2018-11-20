@@ -15,27 +15,30 @@
 
   <tbody>
 
-<div class="container fluid">
-  <div class= "row  d-flex justify-content-around">
-    <% @products.each do |product| %>
-    <div class="border border-white col-sm-3">
-        <a href=""><h2>Bike 1</h2></a>
-        <p>nice smile</p>
-        <strong>$ 280</strong>
-    </div><!-- /col -->
-    <div class="border border-white col-sm-3">
-        <a href=""><h2>Bike 2</h2></a>
-        <p>Pretty cool bike</p>
-        <strong>$ 420</strong>
-    </div><!-- /col -->
-    <div class="border border-white col-sm-3 ">
-        <a href=""><h2>Bike 3</h2></a>
-        <p>my favorite</p>
-        <strong>$ 370</strong>
-    </div><!-- /col -->
-    <% end %>
-  </div>
-</div>
+    <div class="container fluid">
+      <div class= "row  d-flex justify-content-around">
+        <% @products.each do |product| %>
+        <div class="border border-white col-sm-3">
+          <%= image_tag("6041697-a-turtle-that-walks", class: "img-fluid") %>
+          <a href=""><h2>Bowser</h2></a>
+          <p>Always gets into trouble</p>
+          <strong>$ 280</strong>
+        </div><!-- /col -->
+        <div class="border border-white col-sm-3">
+          <%= image_tag("178369516-612x612.jpg", class: "img-fluid") %>
+          <a href=""><h2>Monty</h2></a>
+          <p>Very cool turle that likes to swim</p>
+          <strong>$ 420</strong>
+        </div><!-- /col -->
+        <div class="border border-white col-sm-3 ">
+          <%= image_tag("ralph.jpg", class: "img-fluid") %>
+          <a href=""><h2>Ralphie</h2></a>
+          <p>loves pizza and has 3 other siblings</p>
+          <strong>$ 370</strong>
+        </div><!-- /col -->
+        <% end %>
+      </div>
+    </div>
   </tbody>
 </table>
 
