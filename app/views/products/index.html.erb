@@ -19,11 +19,11 @@
       <div class= "row  d-flex justify-content-around">
         <% @products.each do |p| %>
         <div class="border border-white col-sm-3">
-          <%= image_tag("6041697-a-turtle-that-walks", class: "img-fluid") %>
-          <a href="product1"><h2></h2></a>
-          <p>Always gets into trouble</p>
-          <p>Colour:Green</p>
-          <strong>$ 280</strong>
+          <%= image_tag(p.image_url, class: "image-fluid") if p.image_url %>
+          <%= link_to p.name, p %>
+          <%= p.description %>
+          <%= p.colour %>
+
         </div><!-- /col --><!-- /col -->
         <% end %>
 
@@ -34,6 +34,6 @@
   </tbody>
 
 
-<br>
+<table>
 
 <%= link_to 'New Product', new_product_path %>
