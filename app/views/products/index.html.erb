@@ -17,7 +17,7 @@
 
     <div class="container fluid table">
       <div class= "row  d-flex justify-content-around">
-        <% @products.each do |p| %>
+        <% @products.each do |product| %>
         <div class="border border-white col-sm-3">
           <div class="myimages">
             <%= image_tag(p.image_url, class: "image-fluid") if p.image_url %>
@@ -33,9 +33,9 @@
           <hr>
             <%= p.colour %>
           </hr>
-          <div>
-          <%= p.price %>
-          </div>
+          <strong>
+          $<%= p.price %>
+          </strong>
         </div><!-- /col --><!-- /col -->
         <% end %>
 
