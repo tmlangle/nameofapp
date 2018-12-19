@@ -17,10 +17,10 @@
 
     <div class="container fluid table">
       <div class= "row  d-flex justify-content-around">
-        <% @products.each do |product| %>
+        <% @products.each do |p| %>
         <div class="border border-white col-sm-3">
           <div class="myimages">
-            <%= image_tag(p.image_url, class: "image-fluid") if p.image_url %>
+            <%= image_tag( p.image_url, class: "image-fluid") if p.image_url %>
           </div>
           <div>
             <h2>
