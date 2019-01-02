@@ -17,26 +17,8 @@
 
     <div class="container fluid table">
       <div class= "row  d-flex justify-content-around">
-        <% @products.each do |p| %>
-        <div class="border border-white col-sm-3">
-          <div class="myimages">
-            <%= image_tag( p.image_url, class: "image-fluid") if p.image_url %>
-          </div>
-          <div>
-            <h2>
-              <%= link_to p.name, p %>
-            </h2>
-          </div>
-          <hr>
-            <%= p.description %>
-          </hr>
-          <hr>
-            <%= p.colour %>
-          </hr>
-          <strong>
-          $<%= p.price %>
-          </strong>
-        </div><!-- /col --><!-- /col -->
+        <% @products.each do |product| %>
+        <%= render @products %>
         <% end %>
 
       </div>
