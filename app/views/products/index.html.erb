@@ -1,32 +1,15 @@
 <p id="notice"><%= notice %></p>
-
+<div class="position-absolute">
 <h1>Products</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description:</th>
-      <th>Image url</th>
-      <th>Colour</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-
+</div>
     <div class="container fluid table">
       <div class= "row  d-flex justify-content-around">
         <% @products.each do |product| %>
-        <%= render @products %>
+        <%= render product %>
         <% end %>
 
       </div>
     </div>
 
-  </tbody>
-
-
-<table>
 
 <%= link_to 'Create Product', new_product_path %>
