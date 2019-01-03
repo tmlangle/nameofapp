@@ -18,41 +18,42 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body class="background">
-<div>
-  <div class="border rounded">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="mynavbar">
-      <%= link_to image_tag("rellogo copy.png", size: "50"), root_path %>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <div>
+    <div class="border rounded">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="mynavbar">
+        <%= link_to image_tag("rellogo copy.png", size: "50"), root_path %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse navbar-active" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto navbar-active">
-          <li class="nav-item">
-          <%= link_to "About", simple_pages_about_path %>
-          </li>
-          <li class="nav-item">
-          <%= link_to "Contact", simple_pages_contact_path %>
-          </li>
-          <li class="nav-item">
-          <%= link_to "Products", products_path %>
-          </li>
-          <<li>
-          <%= link_to "Orders", orders_path %>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-      </div>
-      <form class="search_bar" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-        <input type="submit" name="commit" value="Search" class="btn btn-submit" data-disable-with="Search" />
-        <input id="q" class="form-fld" type="text" name="q" />
-      </form>
-    </nav>
+        <div class="collapse navbar-collapse navbar-active" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto navbar-active">
+            <li class="nav-item">
+              <%= link_to "About", simple_pages_about_path %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Contact", simple_pages_contact_path %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Products", products_path %>
+            </li>
+            <<li>
+              <%= link_to "Orders", orders_path %>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+          <%= form.label :q, 'Search for:' %>
+          <%= form.text_field :q, id: 'q', value: params[:q] %>
+          <%= form.submit 'Search' %>
+          <% end %>
+      </nav>
+    </div>
   </div>
-</div>
 
 
   <%= yield %>
