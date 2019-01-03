@@ -1,5 +1,3 @@
-<div class="row  d-flex justify-content-around">
-  <% @products.each do |product| %>
 <div class="border border-white col-sm-3">
     <div class="myimages">
       <%= image_tag( product.image_url, class: "image-fluid") if product.image_url %>
@@ -11,6 +9,4 @@
     </hr>
     <strong>$ <%= product.price %></strong>
   </div><!-- /col -->
-</div>
-<% end %>
 </div>
