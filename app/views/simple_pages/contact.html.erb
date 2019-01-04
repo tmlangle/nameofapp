@@ -1,18 +1,22 @@
-<h1>Contact</h1>
-<h4>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Egestas maecenas pharetra convallis posuere morbi leo urna molestie.
-Diam sit amet nisl suscipit adipiscing.
-</h4>
-<p>
-  <b>Phone:</b>
-  222.222.2222
-</p>
-<p>
-  <b>Email:</b>
-  tehrellangley@gmail.com
-</p>
-<address>
-  <b>Address:</b>
-  222 norwalk dr. durham, nc 27707
-</address>
+<h1>Cantact Us</h1>
+<%= flash[:notice] %>
+
+
+
+<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+<div class="row">
+  <div class="col form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name"%>
+  </div>
+  <div class="col form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+  </div>
+  <div class="col form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  </div>
+</div>
+<%= form.submit "Send", class: "form_label" %>
+<% end %>
