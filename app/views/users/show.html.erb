@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First tehrel:</strong>
+  <%= @user.first_tehrel %>
+</p>
+
+<p>
+  <strong>Last langley:</strong>
+  <%= @user.last_langley %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
