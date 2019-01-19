@@ -6,12 +6,6 @@
 }
 
 .carousel-inner{
-margin:auto;
-width:100%;
-}
-
-#imagesize{
-  width:100%;
 }
 
 .carousel-caption {
@@ -22,4 +16,11 @@ width:100%;
   position:absolute;
   left:50px;
   top:120px;
+}
+
+#carouselExampleIndicators{
+ width:800px;
+ height:400px;
+ margin: auto;
+ margin-top: 150px;
 }

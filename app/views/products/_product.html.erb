@@ -1,12 +1,12 @@
-<div class="border border-white col-sm-3">
-    <div class="myimages">
+<div class="col-xs-6 col-sm-6 col-md-6">
+    <div>
       <%= image_tag( product.image_url, class: "image-fluid") if product.image_url %>
-    </div>
+    </div><br>
     <h1><%= link_to product.name, product %></h1>
     <div>
       <hr>
       <%= product.description %>
-    </hr>
+      </hr> <br>
     <strong>$ <%= product.price %></strong>
-  </div><!-- /col -->
-</div>
+    </div>
+  </div>

@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
-<div class="position-absolute">
-<h1>Products</h1>
-</div>
-    <div class="container fluid table">
-      <div class= "row  d-flex justify-content-around">
-        <% @products.each do |product| %>
-        <%= render product %>
-        <% end %>
 
-      </div>
-    </div>
+<div id="content-title>"
+<h1 class=".mx-auto">Products</h1>
+</div>
+<div class="container-fluid" id="products">
+<div class="row d-flex justify-content-around">
+<% @products.each do |product| %>
+<%= render product %>
+<% end %>
+</div>
+</div>
 
 
 <%= link_to 'Create Product', new_product_path %>

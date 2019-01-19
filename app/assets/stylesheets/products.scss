@@ -1,15 +1,28 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-td {
-  font: italic bold 12px/30px Georgia, serif;color: blue;
+
+#products{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: 10px;
 }
 
-.table >div{
-    height: 500px;
-    width: 100%;
+.container-fluid{
+  width: 100%;
+  padding: 30px;
+  margin: 60px;
 }
 
-.myimages{
-padding: 15px;
+.row {
+
+
+}
+
+.image-fluid {
+  width: 250px;
+  height: 200px;
+  margin:auto;
 }
