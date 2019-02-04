@@ -1,7 +1,6 @@
 <div class="col-xs-6 col-sm-6 col-md-6">
     <div>
-      <%= image_tag( product.image_url, class: "image-fluid") if product.image_url %>
-    </div><br>
+      <%= image_tag( product.image_url, class: "img-fluid") if product.image_url %>
     <h1><%= link_to product.name, product %></h1>
     <div>
       <hr>
@@ -10,3 +9,4 @@
     <strong>$ <%= product.price %></strong>
     </div>
   </div>
+</div>
