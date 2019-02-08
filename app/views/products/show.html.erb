@@ -27,6 +27,22 @@
 <%= @product.price %>
 </p>
 
+<%= render 'new_comment' %>
+<%= render 'comments' %>
+
+<p>
+    <%= f.label :body, "Comments" %><br>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <div class="rating"></div>
+  </p>
+
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+
 <p>
 <%= @product.comments.rating_desc.first %>
 </p>
@@ -34,6 +50,7 @@
 <p>
 <%= @product.highest_rating_comment %>
 </p>
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
