@@ -27,6 +27,18 @@
 <%= @product.price %>
 </p>
 
+<form>
+<div class="form-group">
+<%= render 'new_comment' %>
+<%= render 'comments' %>
+</div>
+</form>
+
+  <p>
+    <div class="rating"></div>
+  </p>
+
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 <p>
 <%= @product.comments.rating_desc.first %>
 </p>
@@ -34,6 +46,7 @@
 <p>
 <%= @product.highest_rating_comment %>
 </p>
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
