@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  validates :name, presence: true
+  validates :discription, presence: true
+  validates :color, presence: true
   has_many :orders
   has_many :comments
   def highest_rating_comment
