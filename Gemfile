@@ -12,7 +12,7 @@ group :production do
 end
 
 group :development, :test do
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3', '< 1.4'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'rake', '< 11.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -58,7 +58,8 @@ group :development do
 end
 
 group :test, :development do
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec', '~> 3.5.0.beta4'
+  gem 'rspec-rails', '~> 3.5.0.beta4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

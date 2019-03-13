@@ -5,7 +5,7 @@ class Ability
     can :manage, User, id: user.id
 
     if user.admin?
-    can :manage, :destroy, :all
+    can :manage, :all
     end
   end
 end
