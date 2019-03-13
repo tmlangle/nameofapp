@@ -3,7 +3,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-
+require 'devise'
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -19,6 +19,12 @@ ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+  # For Devise > 4.1.1
+  config.include Devise::Test::ControllerHelpers, :type => :controller
+  # Use the following instead if you are on Devise <= 4.1.1
+  # config.include Devise::TestHelpers, :type => :controller
+  config.extend ControllerMacros, :type => :controller
+
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
