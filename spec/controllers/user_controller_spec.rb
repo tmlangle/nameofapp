@@ -1,19 +1,26 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
-  let(:user) { User.create!(email:"bill@gmail.com",password:"999999") }
-  context "standard users" do
-    it "cannot access other users show page" do
-      sign_in(:user, user)
-      get :show, params: { id: user.id }
-      expect(response).to eq "sorry not authorized"
-      expect(response).to redirect_to(root_path)
+  let(:user) { User.create!(email: 'bill@example.com', password: '555555') }
 
+  describe 'GET #show' do
 
+    context 'when a user is logged in' do
+        before do
+            sign_in user
+        end
+        it 'loads correct user details' do
+            get :show, params: { id: user.id }
+            expect(assigns(:user)).to eq user
+        end
     end
 
-
-
-
+    context 'when a user is not logged in' do
+      it 'redirects to login' do
+        get :show, params: { id: user.id }
+        expect(response).to redirect_to(new_user_session_path)
+      end
+    end
   end
+
 end
