@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    byebug
+  
     @product = Product.new
   end
 
