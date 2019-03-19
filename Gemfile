@@ -40,6 +40,8 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'rake', '< 11.0'
 # Use Capistrano for deployment
 gem "brakeman"
+
+gem 'dalli'
 # gem 'capistrano-rails', group: :development
 gem 'rails-controller-testing'
 # Reduces boot times through caching; required in config/boot.rb
