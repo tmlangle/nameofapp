@@ -41,6 +41,8 @@ gem 'rake', '< 11.0'
 # Use Capistrano for deployment
 gem "brakeman"
 
+gem 'redis-rails'
+
 gem 'dalli'
 # gem 'capistrano-rails', group: :development
 gem 'rails-controller-testing'
