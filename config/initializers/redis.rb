@@ -10,4 +10,4 @@ else
   # => "OK"\\
   redis.get("mykey")
   # => "hello world"
-end
+end 
