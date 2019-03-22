@@ -8,6 +8,7 @@
   data-amount="<%= @product.price %>">
 </script>
 
-<%= hidden_field_tag(:product_id, ":product_id") %>
-
+<%= form_with(url: '/payments/create', remote: true) do |form| %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+<%= hidden_field_tag(:product_id, @product.id) %>
 <% end %>
