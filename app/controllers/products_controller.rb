@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  load_and_authorize_resource
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   # GET /products
@@ -8,7 +7,7 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-       @products = Product.search(search_term)
+      @products = Product.search(search_term)
     else
       @products = Product.all
     end
