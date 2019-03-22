@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
   resources :charges, only: [:new, :create]
   mount ActionCable.server => '/cable'
-  to: :post '/payments(.:format)', to: 'payments#create'
+  resources :payments, only: :create
 end
