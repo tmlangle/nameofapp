@@ -1,4 +1,7 @@
-<%= form_tag product_path do %>
+<%= form_with(url:payments_path) do |form| %>
+<%= hidden_field_tag(:product_id, @product.id) %>
+
+
 <script
 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -7,12 +10,5 @@ data-name="<%= @product.name %>"
 data-description="<%= @product.description %>"
 data-amount="<%= @product.price %>">
 </script>
-
-<% end %>
-
-
-<%= form_with(url: '/payments/create') do |form| %>
-<%= render partial: "shared/stripe_checkout_button" %>
-<%= hidden_field_tag(:product_id, @product.id) %>
 
 <% end %>
