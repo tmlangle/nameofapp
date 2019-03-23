@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<div class= "row" data-product-id="<%= @product.id %>">
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -27,7 +28,7 @@
 <strong>Price</strong>
 <%= @product.price %>
 </p>
-
+</div>
 
 <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 
