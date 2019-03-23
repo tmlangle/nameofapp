@@ -1,4 +1,4 @@
-<%= form_with(url:payments_path) do |form| %>
+
 <%= hidden_field_tag(:product_id, @product.id) %>
 
 
@@ -10,5 +10,3 @@ data-name="<%= @product.name %>"
 data-description="<%= @product.description %>"
 data-amount="<%= @product.price %>">
 </script>
-
-<% end %>

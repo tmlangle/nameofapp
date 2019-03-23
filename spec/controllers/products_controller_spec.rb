@@ -20,7 +20,7 @@ RSpec.describe ProductsController, type: :controller do
   end
 
   context 'POST #create' do
-    let!(:product) { FactoryBot.create(:product) }
+    let!(:product) { create :product }
 
     it 'create a new product' do
       expect { post(:create, params: { product: params }) }.to change(Product, :count).by(1)

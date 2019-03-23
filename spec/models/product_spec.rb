@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Product do
   let(:product) { Product.create!(name: "race bike",description:"new bike",colour:"blue") }
-  let(:user) { User.create!(email: "bigal@gmail.com",password:"555555")}
+  let(:user) {FactoryBot.create(:user)}
 
   before do
     product.comments.create!(rating: 1, user: user, body: "Awful bike!")
